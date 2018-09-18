@@ -11,7 +11,7 @@ import random
 import time
 
 def downloadHtml(url,headers=[()],proxy={},timeout=None,decodeInfo='utf-8',num_tries=10,
-                              useProxyRatio=5):
+                              useProxyRatio=11):
     '''
     一个完善一点下载网页的逻辑
     支持UA等HTTP Request Headers
@@ -58,7 +58,8 @@ def downloadHtml(url,headers=[()],proxy={},timeout=None,decodeInfo='utf-8',num_t
     return html
     
     
-    
+headers = [('User-Agent','Mozilla/5.0')]
+print(downloadHtml('http://maoyan.com',headers=headers))
     
     
     
